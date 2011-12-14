@@ -20,9 +20,6 @@ end
 
 use Rack::Session::Cookie
 
-ENV['APP_ID'] = 'qkfp2sgah9s2fa2ka2yyjj3e'
-ENV['APP_SECRET'] = 'yMqKxTpg2N'
-
 use OmniAuth::Builder do
   provider :netflix, ENV['APP_ID'], ENV['APP_SECRET']
 end
