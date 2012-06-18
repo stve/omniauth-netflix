@@ -4,10 +4,10 @@ module OmniAuth
   module Strategies
     class Netflix < OmniAuth::Strategies::OAuth
       option :client_options, {
-        :site               => 'http://api.netflix.com',
+        :site               => 'http://api-public.netflix.com',
         :authorize_url      => 'https://api-user.netflix.com/oauth/login',
-        :request_token_url  => 'http://api.netflix.com/oauth/request_token',
-        :access_token_url   => 'http://api.netflix.com/oauth/access_token'
+        :request_token_url  => 'http://api-public.netflix.com/oauth/request_token',
+        :access_token_url   => 'http://api-public.netflix.com/oauth/access_token'
       }
 
       uid { raw_info['user']['user_id'] }
