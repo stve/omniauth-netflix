@@ -14,7 +14,7 @@ describe OmniAuth::Strategies::Netflix do
 
   describe '#client_options' do
     it 'has correct Netflix site' do
-      subject.options.client_options.site.should eq('http://api.netflix.com')
+      subject.options.client_options.site.should eq('http://api-public.netflix.com')
     end
 
     it 'has correct authorize url' do
@@ -22,11 +22,11 @@ describe OmniAuth::Strategies::Netflix do
     end
 
     it 'has correct request token url' do
-      subject.options.client_options.request_token_url.should eq('http://api.netflix.com/oauth/request_token')
+      subject.options.client_options.request_token_url.should eq('http://api-public.netflix.com/oauth/request_token')
     end
 
     it 'has correct access token url' do
-      subject.options.client_options.access_token_url.should eq('http://api.netflix.com/oauth/access_token')
+      subject.options.client_options.access_token_url.should eq('http://api-public.netflix.com/oauth/access_token')
     end
   end
 
