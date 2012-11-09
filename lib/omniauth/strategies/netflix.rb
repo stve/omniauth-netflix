@@ -43,7 +43,7 @@ module OmniAuth
       end
 
       def raw_info
-        @raw_info ||= MultiJson.decode(access_token.get("http://api.netflix.com/users/#{@access_token.params[:user_id]}?output=json").body)
+        @raw_info ||= MultiJson.decode(access_token.get("http://api-public.netflix.com/users/#{@access_token.params[:user_id]}?output=json").body)
       end
 
     end
